@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ping-Ping's System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/qr.css" />
+    <link rel="stylesheet" href="css/inventory.css" />
+    <link rel="stylesheet" href="css/scanner.css" />
+    <link rel="stylesheet" href="css/expiration.css" />
+    <link rel="stylesheet" href="css/reports.css" />
+    <link rel="stylesheet" href="css/users.css" />
+</head>
+<body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand brand-logo-wrap">
+          <img
+            src="images/pingping-sidebar-logo.png"
+            class="custom-sidebar-logo"
+          />
+        </div>
+
+        <div class="workspace-label">WORKSPACE</div>
+
+        <nav id="mainNav" class="main-nav">
+          <button class="nav-item active" data-page="dashboard">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                <path
+                  d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+                /></svg></span
+            >Dashboard
+          </button>
+
+          <div class="nav-section">INVENTORY</div>
+
+          <button class="nav-item" data-page="products">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"
+                />
+                <path d="M12 22V12" />
+                <polyline points="3.29 7 12 12 20.71 7" />
+                <path d="m7.5 4.27 9 5.15" /></svg></span
+            >Product list
+          </button>
+
+          <button class="nav-item" data-page="inventory">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"
+                />
+                <path d="m7 16.5-4.74-2.85" />
+                <path d="m7 16.5 5-3" />
+                <path d="M7 16.5v5.17" />
+                <path
+                  d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"
+                />
+                <path d="m17 16.5-5-3" />
+                <path d="m17 16.5 4.74-2.85" />
+                <path d="M17 16.5v5.17" />
+                <path
+                  d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"
+                />
+                <path d="M12 8 7.26 5.15" />
+                <path d="m12 8 4.74-2.85" />
+                <path d="M12 13.5V8" /></svg></span
+            >Inventory
+          </button>
+
+          <button class="nav-item" data-page="stockin">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m10 17 5-5-5-5" />
+                <path d="M15 12H3" />
+                <path
+                  d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"
+                /></svg></span
+            >Stock-in
+          </button>
+
+          <button class="nav-item" data-page="stockout">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M21 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6"
+                />
+                <path d="m21 3-9 9" />
+                <path d="M15 3h6v6" /></svg></span
+            >Stock-out
+          </button>
+
+          <button class="nav-item" data-page="scanner">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17 12v4a1 1 0 0 1-1 1h-4" />
+                <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+                <path d="M17 8V7" />
+                <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+                <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+                <path d="M7 17h.01" />
+                <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+                <rect x="7" y="7" width="5" height="5" rx="1" /></svg></span
+            >QR scanner
+          </button>
+
+          <button class="nav-item" data-page="expiration">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 2v3" />
+                <path d="M16 2v3" />
+                <rect x="3" y="3" width="18" height="18" rx="2" />
+                <path d="M3 9h18" />
+                <path d="M8 13h.01" />
+                <path d="M12 13h.01" />
+                <path d="M16 13h.01" />
+                <path d="M8 17h.01" />
+                <path d="M12 17h.01" />
+                <path d="M16 17h.01" /></svg></span
+            >Expiration
+          </button>
+
+          <div class="nav-section admin-only">MANAGEMENT</div>
+
+          <button class="nav-item admin-only" data-page="reports">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 21v-6" />
+                <path d="M12 21V3" />
+                <path d="M19 21V9" /></svg></span
+            >Reports
+          </button>
+
+          <button class="nav-item admin-only" data-page="users">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <path d="M16 3.128a4 4 0 0 1 0 7.744" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <circle cx="9" cy="7" r="4" /></svg></span
+            >User management
+          </button>
+
+          <!-- Log out: last item of the sidebar menu (shown to every role) -->
+          <button id="logoutBtn" class="nav-item nav-logout">
+            <span class="nav-icon"
+              ><svg class="lucide" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <path d="m16 17 5-5-5-5" />
+                <path d="M21 12H9" /></svg></span
+            >Log out
+          </button>
+        </nav>
+
+        <div class="sidebar-footer" aria-hidden="true">
+          <div class="footer-tagline">
+            <p>Good Food<br />Good Business<br />Grows Together</p>
+            <svg class="footer-swoosh" viewBox="0 0 110 24">
+              <path d="M3 18 C 30 23, 72 21, 106 5" />
+            </svg>
+            <svg
+              class="lucide footer-heart"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"
+              />
+            </svg>
+          </div>
+          <svg
+            class="footer-waves"
+            viewBox="0 0 245 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="wave-1"
+              d="M0 34 C 38 24, 78 30, 118 46 S 205 66, 245 22 L245 100 L0 100 Z"
+            />
+            <path
+              class="wave-2"
+              d="M0 58 C 40 46, 86 52, 126 66 S 208 84, 245 52 L245 100 L0 100 Z"
+            />
+            <path
+              class="wave-3"
+              d="M0 78 C 46 68, 92 74, 134 84 S 214 96, 245 76 L245 100 L0 100 Z"
+            />
+          </svg>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <svg
+            class="banner-waves"
+            viewBox="0 0 1200 80"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <path
+              class="bw-1"
+              d="M0 48 C 160 30, 320 62, 520 46 S 860 18, 1060 44 S 1160 40, 1200 30 L1200 80 L0 80 Z"
+            />
+            <path
+              class="bw-2"
+              d="M0 62 C 220 48, 400 70, 640 60 S 980 40, 1200 56 L1200 80 L0 80 Z"
+            />
+          </svg>
+
+          <button
+            id="mobileMenu"
+            class="icon-button mobile-menu"
+            aria-label="Open menu"
+          >
+            ☰
+          </button>
+
+          <!-- Page title (icon, WORKSPACE label, title, subtitle) - filled in by updatePageBanner() in js/core/router.js -->
+          <div class="banner-inner">
+            <div class="banner-icon" id="pageBannerIcon"></div>
+            <div class="banner-text">
+              <div class="banner-label">WORKSPACE</div>
+              <h1 id="pageTitle">Dashboard</h1>
+              <p id="pageSubtitle"></p>
+            </div>
+          </div>
+
+          <div class="topbar-right">
+            <div class="user-menu">
+              <div class="avatar" id="userAvatar">
+                <svg class="avatar-img" viewBox="0 0 64 64" aria-hidden="true">
+                  <path d="M8 64c0-13 10-19 24-19s24 6 24 19z" fill="#2f7d57" />
+                  <rect x="27" y="38" width="10" height="10" rx="3" fill="#e3a982" />
+                  <circle cx="19.5" cy="30" r="3" fill="#f2c29b" />
+                  <circle cx="44.5" cy="30" r="3" fill="#f2c29b" />
+                  <ellipse cx="32" cy="29" rx="12.5" ry="13.5" fill="#f2c29b" />
+                  <path d="M18.5 28c-2-13 7-18 14-18 8 0 15 5 13 18-2-5-5-8-13-8-8 0-11 3-14 8z" fill="#2b2118" />
+                  <circle cx="27" cy="30.5" r="1.7" fill="#2b2118" />
+                  <circle cx="37" cy="30.5" r="1.7" fill="#2b2118" />
+                  <path d="M27.5 36c2.5 3 6.5 3 9 0" fill="none" stroke="#a8553a" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+              </div>
+              <div class="user-meta">
+                <strong id="userName">Admin</strong>
+                <small id="userRole">Administrator</small>
+              </div>
+            </div>
+
+          </div>
+        </header>
+
+        <div id="pageContent" class="page-content"></div>
+      </main>
+    </div>
+
+    <div id="modalRoot"></div>
+    <div id="toastRoot" class="toast-root"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/icons.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/qrcode.js"></script>
+    <script src="js/jsQR.js"></script>
+    <script src="js/qr.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/inventory.js"></script>
+    <script src="js/StockIn.js"></script>
+    <script src="js/StockOut.js"></script>
+    <script src="js/scanner.js"></script>
+    <script src="js/expiration.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="js/users.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

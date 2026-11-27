@@ -1,0 +1,3 @@
+/* Inventory, Stock-in and Stock-out pages */
+.search-box { margin-bottom: 16px; }
+.search-box input { width: min(320px, 100%); }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - Ping-Ping's Tinapa and Pasalubong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Kaushan+Script&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+<div class="login-screen">
+      <div class="login-art">
+        <div class="art-copy">
+          <h1 class="hero-title">Ping-Ping's</h1>
+          <p class="hero-subtitle">Tinapa and Pasalubong</p>
+          <p class="hero-tagline">Monitoring System</p>
+        </div>
+      </div>
+
+      <div class="login-panel">
+        <div class="mobile-brand brand">
+          <img
+            src="images/pingping-sidebar-logo.png"
+            alt="Ping-Ping's Logo"
+            class="custom-sidebar-logo"
+          />
+        </div>
+
+        <div class="login-box">
+          <div class="eyebrow">
+            <h1>WELCOME BACK!</h1>
+          </div>
+
+          <form id="loginForm">
+            <label for="username">Username</label>
+            <input
+              id="username"
+              autocomplete="username"
+              placeholder="Enter your username"
+              required
+            />
+
+            <div class="label-row">
+              <label for="password">Password</label>
+            </div>
+
+            <div class="password-wrapper">
+              <input
+                id="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Enter your password"
+                required
+              />
+              <button
+                type="button"
+                class="text-button password-toggle"
+                id="togglePassword"
+              >
+                Show
+              </button>
+            </div>
+
+            <div id="errorMsg" class="form-error hidden"></div>
+
+            <button class="btn btn-primary btn-wide" type="submit">
+              Sign in <span>→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

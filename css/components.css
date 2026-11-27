@@ -1,0 +1,143 @@
+/* Shared pieces used by many pages (same look as the Stockwise design) */
+h1, h2, h3, h4, p { margin: 0; }
+
+/* ---------- Tables ---------- */
+table { width: 100%; border-collapse: collapse; white-space: nowrap; }
+th {
+  text-align: left; color: #8b9890; font-size: 10px; letter-spacing: .2px;
+  font-weight: 700; padding: 11px 12px; background: #fafcfb;
+  border-bottom: 1px solid var(--line); text-transform: uppercase;
+}
+td { padding: 13px 12px; border-bottom: 1px solid #eff3f0; font-size: 11px; color: #4b5a51; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover { background: #fcfefc; }
+td.empty { text-align: center; color: #93a097; padding: 42px 15px; }
+
+/* ---------- Page header pieces ---------- */
+.panel-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; flex-wrap: wrap; }
+.panel-head h3 { font: 800 14px Manrope, sans-serif; margin: 0; }
+.panel-head p { font-size: 10px; color: var(--muted); margin: 5px 0 0; }
+.page-content > .panel + .panel, .page-content > .panel + .form-layout, .page-content > .form-layout + .panel, .page-content > .stats-grid + .panel { margin-top: 18px; }
+.page-content > .stats-grid + .panel { margin-top: 0; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.link-button { border: 0; background: transparent; color: var(--green); font-size: 11px; font-weight: 800; white-space: nowrap; }
+
+/* ---------- Stat cards ---------- */
+.stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; margin-bottom: 23px; }
+.stats-grid.five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.stat-card.warn .stat-icon { background: var(--amber-bg); color: var(--amber); }
+.stat-card.danger .stat-icon { background: var(--red-bg); color: var(--red); }
+
+/* ---------- Toolbar / forms ---------- */
+.toolbar { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; margin-bottom: 16px; }
+.toolbar input { width: min(280px, 100%); }
+.toolbar select, .field select {
+  border: 1px solid #dce5df; border-radius: 9px; background: #fff;
+  padding: 12px 13px; min-height: 43px; color: var(--ink);
+}
+.toolbar select { width: auto; min-width: 140px; }
+.toolbar .spacer { flex: 1; }
+.field { min-width: 0; }
+.field.full { grid-column: 1 / -1; }
+.field label { display: block; font-size: 11px; font-weight: 700; margin: 0 0 8px; }
+.field input:disabled { background: #f3f6f4; cursor: not-allowed; }
+.form-layout { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(260px, .8fr); gap: 18px; align-items: start; }
+.form-panel { padding: 23px; }
+.form-panel h3 { font: 800 14px Manrope, sans-serif; margin: 0 0 5px; }
+.form-panel .sub { font-size: 11px; color: var(--muted); margin: 0 0 22px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 22px; }
+
+/* ---------- Buttons (extra variants) ---------- */
+.btn-soft { background: var(--mint); color: var(--green); }
+.btn-danger { background: var(--red-bg); color: var(--red); }
+.btn[disabled] { opacity: .5; cursor: not-allowed; transform: none; }
+
+/* ---------- Info card / notices ---------- */
+.info-card { padding: 22px; }
+.info-card .info-icon { width: 58px; height: 58px; background: #e9f6ef; color: var(--green); display: grid; place-items: center; border-radius: 15px; margin-bottom: 17px; }
+.info-card .info-icon .lucide { width: 29px; height: 29px; }
+.info-card h3 { font: 800 14px Manrope, sans-serif; margin: 0 0 8px; }
+.info-card p { font-size: 11px; color: var(--muted); line-height: 1.7; }
+.info-list { margin-top: 20px; display: grid; gap: 13px; }
+.info-list div { display: flex; align-items: center; gap: 9px; font-size: 11px; color: #637168; }
+.check { display: inline-flex; flex-shrink: 0; color: var(--green); font-weight: 800; }
+.check .lucide { width: 18px; height: 18px; display: block; stroke-width: 2.4; }
+.notice, .msg {
+  padding: 12px 14px; background: #f1f8f3; border: 1px solid #dcefe2; color: #456553;
+  border-radius: 9px; font-size: 11px; line-height: 1.6; margin-bottom: 15px;
+}
+.notice.warn { background: #fff8e9; border-color: #f5e5bc; color: #84601e; }
+.msg-ok { background: #f1f8f3; border-color: #dcefe2; color: #456553 !important; }
+.msg-error { background: var(--red-bg); border-color: #f1cfd0; color: var(--red) !important; }
+.panel .notice, .panel .msg { margin-top: 0; }
+
+/* ---------- Detail grid (scanner result) ---------- */
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin: 16px 0; }
+.detail-item { padding: 12px; background: #f8faf8; border-radius: 8px; min-width: 0; }
+.detail-item small { display: block; font-size: 10px; color: #8d9a91; margin-bottom: 6px; }
+.detail-item strong { font-size: 12px; word-break: break-word; }
+.purchase-box { padding: 16px; border: 1px solid var(--line); border-radius: 10px; margin-top: 18px; }
+.purchase-box h4 { margin: 0 0 7px; font-size: 13px; }
+.purchase-box p { font-size: 11px; color: var(--muted); }
+.purchase-buttons { display: flex; gap: 9px; margin-top: 14px; }
+
+/* ---------- Pill tabs (expiration + reports) ---------- */
+.pill-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.pill-tab {
+  padding: 9px 15px; border: 1px solid #dce5df; border-radius: 999px; background: #fff;
+  color: #40534a; font-size: 11px; font-weight: 700;
+}
+.pill-tab:hover { background: #f1faf4; color: var(--green); }
+.pill-tab.active { background: var(--green); border-color: var(--green); color: #fff; }
+
+/* ---------- Summary chips ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 16px; }
+.chip { padding: 8px 13px; border-radius: 8px; font-size: 11px; font-weight: 800; background: #eaf6ef; color: #187b58; }
+.chip.red { background: var(--red-bg); color: var(--red); }
+.chip.amber { background: var(--amber-bg); color: var(--amber); }
+
+tr.row-expired { background: #fff7f7; }
+tr.row-near { background: #fffcf3; }
+.you-tag { margin-left: 6px; font-size: 11px; color: #8b9890; }
+.status-dot { width: 7px; height: 7px; border-radius: 50%; background: #219568; }
+
+@media (max-width: 1100px) { .stats-grid.five { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 900px) {
+  .stats-grid, .stats-grid.five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .form-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) { .form-grid, .detail-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Category combo box (type or pick) ---------- */
+.combo { position: relative; }
+.combo input { width: 100%; padding-right: 38px; }
+.combo-toggle {
+  position: absolute; top: 0; right: 0; height: 100%; width: 38px;
+  display: grid; place-items: center; background: none; border: 0;
+  color: var(--muted); cursor: pointer;
+}
+.combo-list {
+  position: absolute; left: 0; right: 0; top: calc(100% + 4px); z-index: 20;
+  margin: 0; padding: 5px; list-style: none; max-height: 220px; overflow-y: auto;
+  background: #fff; border: 1px solid #dce5df; border-radius: 9px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .1);
+}
+.combo-list li { padding: 9px 10px; border-radius: 6px; font-size: 13px; cursor: pointer; color: var(--ink); }
+.combo-list li:hover, .combo-list li.active { background: #eef5f0; }
+.combo-list.hidden, .combo-list li.hidden { display: none; }
+
+/* Stock-in / Stock-out: one large transaction box that fills the whole row */
+.form-layout.stock-layout { grid-template-columns: 1fr; }
+.stock-layout .form-panel { padding: 36px 40px 40px; }
+.stock-layout .form-panel h3 { font-size: 22px; margin-bottom: 8px; }
+.stock-layout .form-panel .sub { font-size: 13.5px; margin-bottom: 32px; }
+.stock-layout .form-grid { gap: 24px 28px; }
+.stock-layout .field label { font-size: 13px; margin-bottom: 10px; }
+.stock-layout .field input, .stock-layout .field select { height: 56px; padding: 0 18px; font-size: 15px; border-radius: 12px; }
+.stock-layout .form-actions { margin-top: 34px; }
+.stock-layout .form-actions .btn { padding: 15px 30px; font-size: 15px; border-radius: 12px; }
+@media (max-width: 560px) {
+  .stock-layout .form-panel { padding: 24px 20px 26px; }
+  .stock-layout .form-panel h3 { font-size: 19px; }
+}

@@ -1,0 +1,10 @@
+/* Reports page */
+.rep-filter-row { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 16px; }
+.rep-filter-row > div { min-width: 160px; }
+.rep-filter-row label { display: block; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+.rep-filter-row input, .rep-filter-row select { width: 100%; border: 1px solid #dce5df; border-radius: 9px; padding: 12px 13px; min-height: 43px; background: #fff; }
+.table-footer { display: flex; justify-content: space-between; gap: 10px; padding-top: 13px; font-size: 10px; color: #8c9991; }
+@media print {
+  .pill-tabs, .rep-filter-row, .actions { display: none !important; }
+  th, td { white-space: normal; font-size: 12px; }
+}

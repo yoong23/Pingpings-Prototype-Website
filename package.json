@@ -1,0 +1,20 @@
+{
+  "name": "ping-pings_prototype_redesigned",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --disable-warning=ExperimentalWarning server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "selfsigned": "^2.4.1"
+  }
+}

@@ -1,0 +1,20 @@
+/* QR Scanner page */
+.scanner-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.scanner-box {
+  position: relative; background: #18251f; aspect-ratio: 4 / 3; border-radius: 12px;
+  overflow: hidden; display: flex; align-items: center; justify-content: center; color: #fff;
+}
+.scanner-box video { width: 100%; height: 100%; object-fit: cover; }
+.scanner-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 25px; background: #18251f; }
+.scan-frame { width: 90px; height: 90px; border: 2px solid #8be3b2; border-radius: 12px; margin: 0 auto 18px; position: relative; }
+.scan-frame:before { content: ""; position: absolute; inset: 12px; border: 1px dashed #8be3b2; border-radius: 6px; }
+.scanner-placeholder strong { display: block; font-size: 13px; }
+.scanner-placeholder span { font-size: 11px; color: #b6c5bc; }
+.scanner-actions { display: flex; gap: 8px; margin-top: 14px; }
+.scan-status { font-size: 11px; color: var(--muted); min-height: 18px; margin-top: 12px; }
+.scan-divider { margin: 20px 0; border: none; border-top: 1px solid var(--line); }
+.manual-label { display: block; font-size: 11px; font-weight: 700; margin-bottom: 8px; }
+.manual-row { display: flex; gap: 8px; }
+.manual-row input { flex: 1; min-width: 0; border: 1px solid #dce5df; border-radius: 9px; padding: 12px 13px; min-height: 43px; }
+.empty-state.small { padding: 30px 10px; }
+@media (max-width: 900px) { .scanner-layout { grid-template-columns: 1fr; } }

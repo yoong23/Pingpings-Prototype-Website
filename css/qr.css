@@ -1,0 +1,7 @@
+/* QR popup uses the shared .modal styles from base.css */
+#qrHolder { display: inline-block; margin: 6px 0 14px; padding: 16px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+#qrHolder canvas { max-width: 100%; height: auto; display: block; }
+.qr-modal { width: min(380px, 100%); text-align: center; }
+.qr-name { font: 800 15px Manrope, sans-serif; margin-bottom: 4px; }
+.qr-code { color: var(--muted); margin-bottom: 16px; font-size: 12px; }
+.qr-actions { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
